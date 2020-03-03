@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+//for library release
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 29
@@ -21,6 +23,16 @@ android {
         }
     }
 
+}
+
+publish {
+    userOrg = 'young21kang'
+    groupId = 'com.jineesoft.mylibrary'
+    artifactId = 'library-test'
+    publishVersion = '0.1'
+    desc = 'https://github.com/geniea/LibTest'
+    website = 'http://jineesoft.com'
+    issueTracker = "https://github.com/geniea/LibTest/issues"
 }
 
 dependencies {
